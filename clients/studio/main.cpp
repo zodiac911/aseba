@@ -61,9 +61,6 @@ int main(int argc, char *argv[])
 	QCoreApplication::setOrganizationName("EPFL-LSRO-Mobots");
 	QCoreApplication::setOrganizationDomain("mobots.epfl.ch");
 	QCoreApplication::setApplicationName("Aseba Studio");
-
-	QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
-	QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
 	
 	// override dashel signal handling
 	signal(SIGTERM, SIG_DFL);

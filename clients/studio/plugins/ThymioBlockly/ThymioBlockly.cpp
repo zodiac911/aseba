@@ -227,7 +227,7 @@ namespace Aseba { namespace ThymioBlockly
 	{
 		QSettings settings;
 		
-		QString initialFileName(settings.value("ThymioVPL/snapshotFileName", QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation)).toString());
+		QString initialFileName(settings.value("ThymioVPL/snapshotFileName", QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)).toString());
 		if (initialFileName.isEmpty() && !de->openedFileName().isEmpty())
 		{
 			const QFileInfo pf(de->openedFileName());
